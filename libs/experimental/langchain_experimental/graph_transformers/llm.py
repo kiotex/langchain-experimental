@@ -754,6 +754,9 @@ class LLMGraphTransformer:
                 # Check if mandatory properties are there
                 if (
                     not isinstance(rel, dict)
+                ):
+                    continue
+                if (
                     or not rel.get("head")
                     or not rel.get("tail")
                     or not rel.get("relation")
